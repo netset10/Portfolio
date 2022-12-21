@@ -1,0 +1,124 @@
+body{
+	margin: 0;
+}
+
+table {
+	border: 0px solid white;
+}
+
+tr{
+	height:80px;
+	border-width: 0px;
+}
+tr.day{
+	color: white; font-size: 20pt;
+}
+
+
+th{
+	border-width: 0px;
+}
+
+
+th#title{
+	font-size: 30pt;
+	font-family: D2Coding;
+	font-weight: bold;
+	color: #FFBB00; 
+}
+
+
+td{
+	border: 1px solid black;
+	border-radius: 10px;
+	font-family: D2Coding;
+	font-weight: bold;
+	width: 100px;
+	text-align: center;
+}
+
+.date>td{
+	text-align: right;
+	vertical-align: top;	
+}
+td.sunday{
+	background-color: #FF5555;
+}
+td.saturday{
+	background-color: #5599FF;
+}
+td.etcday{
+	background-color: #555555;
+}
+
+
+td.notThisMonth{
+	font-size: 10pt;
+	background: whitesmoke;
+	
+}
+
+.notThisMonth.sun{
+	color: #FF5555;
+}
+.notThisMonth.etc{
+	color: #555555;
+}
+.notThisMonth.sat{
+	color: #5599FF;
+}
+
+.sun{
+	color: red;
+	background-color: #F8F8FF;
+}
+.sat{
+	color: blue;
+	background-color: #F8F8FF;
+}
+.etc{
+}
+
+
+.date>td:hover{/* 마우스를 올리고 있을 때*/
+	background-color: #FBFBFB;
+}
+.date>td:active{/* 마우스로 누르고 있을 때*/
+	background-color: #EEEEEE;
+}
+
+
+
+
+
+.select{
+	width: 60px;
+	height: 30px;
+}
+
+span{
+	font-size: 9pt;
+}
+
+
+
+
+#popup{
+	display: none;
+	position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #00000033;
+}
+
+#popup>*{
+	position: absolute;
+	left: 30%;
+	top: 30%;
+    width: 40%;
+    height: 40%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

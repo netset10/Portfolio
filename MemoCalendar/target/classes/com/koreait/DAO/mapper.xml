@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.koreait.DAO.MyBatisDAO">
+
+	<insert id="insertMemo" parameterType="memoVO">
+		insert into calendarMemo (strDate, memo) values(#{strDate}, #{memo})
+	</insert>
+	
+	<update id="updateMemo" parameterType="memoVO">
+		update calendarMemo set memo=#{memo} where strDate=#{strDate}
+	</update>
+	
+	<delete id="deleteMemo" parameterType="String">
+		delete from calendarMemo where strDate=#{strDate}
+	</delete>
+	
+	<select id="selectMemos" parameterType="map" resultType="memoVO">
+		select * from calendarMemo where strDate between #{startDate} and #{endDate} order by strDate
+	</select>
+	
+	<select id="selectMemoCount" parameterType="String" resultType="int">
+		select count(*) from calendarMemo where strDate=#{strDate}
+	</select>
+	
+</mapper>
